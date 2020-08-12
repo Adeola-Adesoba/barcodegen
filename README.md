@@ -66,9 +66,9 @@ for the image, you should see something like the below, if not, please check you
 
 This web app was developed to for the Barcode generator and is deployed on Heroku and hosted at https://mbcodegen.herokuapp.com/. 
 
-You can test it by providing a video URL as an input to generate a barcode.
+You can test it by providing either a YouTube video URL, Video ID or both as an input to generate a barcode.
 
-Note: This can only take Video URL for now and will be further improved upon to take both Video IDs and URLs respectively.
+Note: This Web app can take both Video IDs and URLs respectively.
 
  
 ## Setup
