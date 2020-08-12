@@ -62,8 +62,31 @@ for the image, you should see something like the below, if not, please check you
 
 <br>
 
-### Movie Barcode Generator
- This web app for the Barcode generator is hosted at herokuapp.com. You can test it by providing a video ID as an input to generate a barcode.
+### Movie Barcode Generator Web App
+
+This web app was developed to for the Barcode generator and is deployed on Heroku and hosted at https://mbcodegen.herokuapp.com/. 
+
+You can test it by providing a video URL as an input to generate a barcode.
+
+ !["u0AN01tdQQk.png"](https://github.com/Adeola-Adesoba/barcodegen/blob/master/images/u0AN01tdQQk.png)
+ 
+
+## Setup
+
+When you clone this repository, open Command Prompt in the same folder the repository will be downloaded into.
+
+Navigate to the downloaded repository (cd barcodegen)
+
+Create a Virtual environment to install all required packages as described above
+
+run app.py
+
+Go to the https Flask link that comes up on your computer to access the webapp
+
+Input your Video URL and Generate Barcode from your local computer
+
+ 
+ 
 
 
 **This project is tested on Linux and OS X systems. If you think Windows systems worth to test, feel free to do it, but I highly recommend, do not try at home!**
