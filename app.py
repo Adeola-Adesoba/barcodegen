@@ -29,8 +29,8 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/seun", methods = ['GET', 'POST'])
-def seun():
+@app.route("/mbc_endpoint", methods = ['GET', 'POST'])
+def mbc_endpoint():
     # return None
     # full_filename = os.path.join(a.config['UPLOAD_FOLDER'], 'g8vHhgh6oM0/g8vHhgh6oM0.png')
     # return render_template("index.html", user_image = full_filename)
