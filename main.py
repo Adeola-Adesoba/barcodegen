@@ -323,7 +323,7 @@ def gen_mbc(video_id):
         # Write barcode data to json file
         # Check if the file is already available, delete it.
         static_path = os.getcwd() +'/'+ output_directory
-        print("static path >>>>>>>>..",static_path)
+        print("staic path >>>>>>>>..",static_path)
         # filenamejson =  yturl.split("=")[-1] + ".json"
         print('argjson>>>>>>>>',arg_json)
 
