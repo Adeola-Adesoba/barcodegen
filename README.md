@@ -68,26 +68,28 @@ This web app was developed to for the Barcode generator and is deployed on Herok
 
 You can test it by providing a video URL as an input to generate a barcode.
 
- !["u0AN01tdQQk.png"](https://github.com/Adeola-Adesoba/barcodegen/blob/master/images/u0AN01tdQQk.png)
- 
+Note: This can only take Video URL for now and will be further improved upon to take both Video IDs and URLs respectively.
 
+ 
 ## Setup
 
 When you clone this repository, open Command Prompt in the same folder the repository will be downloaded into.
 
 Navigate to the downloaded repository (cd barcodegen)
 
-Create a Virtual environment to install all required packages as described above
+Create a Virtual environment to install all required packages by installing the requirements.txt:
 
-run app.py
+$conda create --name barcodegen
+$conda activate barcodegen
+$(barcodegen) conda install -r requirements.txt
+
+run app.py ( This should run after properly installing flask and its dependencies)
 
 Go to the https Flask link that comes up on your computer to access the webapp
 
-Input your Video URL and Generate Barcode from your local computer
+Input your Video URL and Generate Barcode from your local computer to ensure it is working properly.
 
  
- 
-
 
 **This project is tested on Linux and OS X systems. If you think Windows systems worth to test, feel free to do it, but I highly recommend, do not try at home!**
 
