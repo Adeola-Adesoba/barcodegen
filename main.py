@@ -273,7 +273,8 @@ def gen_mbc(video_id):
     # key = yaml_parser(home + r'\static\config.yaml')
     pafy.set_api_key(key='AIzaSyDK_7oWbudGzLl4VNxxO-CX_HgnfNzkhLA')
 
-    
+    # use an if statement to check if the length of the video id received is ==11 
+    # then concatenate the video_id to a YouTube url
     if len(video_id)==11:
         yturl = f'https://www.youtube.com/watch?v={video_id}'
     else:
