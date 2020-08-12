@@ -273,9 +273,7 @@ def gen_mbc(video_id):
     # key = yaml_parser(home + r'\static\config.yaml')
     pafy.set_api_key(key='AIzaSyDK_7oWbudGzLl4VNxxO-CX_HgnfNzkhLA')
 
-    # if user hasn't entered a youtube url, no worries, we have alive one.
-    # if yturl is None:
-    #     yturl = default_single
+    
     if len(video_id)==11:
         yturl = f'https://www.youtube.com/watch?v={video_id}'
     else:
