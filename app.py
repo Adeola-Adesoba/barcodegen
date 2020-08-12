@@ -40,6 +40,11 @@ def mbc_endpoint():
         # return render_template("index.html", user_image = full_filename)
         # print('--------', video_id)
         gen_mbc(video_id)
+
+        if len(video_id)==11:
+            video_id = f'https://www.youtube.com/watch?v={video_id}'
+        else:
+            video_id = video_id
         return video_id
 
         #

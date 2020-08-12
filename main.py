@@ -276,7 +276,10 @@ def gen_mbc(video_id):
     # if user hasn't entered a youtube url, no worries, we have alive one.
     # if yturl is None:
     #     yturl = default_single
-    yturl = f'https://www.youtube.com/watch?v={video_id}'
+    if len(video_id)==11:
+        yturl = f'https://www.youtube.com/watch?v={video_id}'
+    else:
+        yturl = video_id
     # yturl = f'{barcode}'
 
     print('-------',yturl)
