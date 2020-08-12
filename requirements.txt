@@ -1,0 +1,12 @@
+numpy
+pafy
+pyyaml
+httplib2>=0.18.1
+youtube-dl
+gunicorn
+Flask
+opencv-python
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug

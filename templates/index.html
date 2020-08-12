@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>MovieBarCodeGenerator.html</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"> -->
+    <style>
+        .btn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* On mouse-over */
+        .btn:hover {
+            background: #eee;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .generate {
+            color: green;
+        }
+    </style>
+
+    <head>
+
+    <body>
+        <h1> MovieBarCodeGenerator</h1>
+        <form method="POST">
+            <p>
+                <label>Input video ID</label>
+                <input type="text" id="videoID" value="" name="videoid" />
+                <button type="button" class="btn generate barcode">Generate BarCode</button>
+            </p>
+        </form>
+
+        <p>
+        <h2> MovieBarCode</h2>
+        </p>
+
+        <div id="barcodegenerated" style="text-align: center;">
+
+            <!-- <img src="../output/g8vHhgh6oM0\g8vHhgh6oM0.png"  width="120" height="90" /> -->
+            <!-- {{image}} -->
+            <!-- <img alt= 'adeola' src='C:\Users\adeol\moviebarcode\output\g8vHhgh6oM0\g8vHhgh6oM0.png'> -->
+            <!-- <img src="{{ user_image }}" alt="User Image"> -->
+
+        </div>
+        <div id="loader_display" class="hidden" style="text-align: center;"><img src="static/loader.gif" alt="Loader">
+        </div>
+
+        <script>
+            // function myFunction() {
+            //     id = document.getElementById("videoID").value
+            //     var imgSrc = "../output/" + id + "/" + id + ".png"
+            //     alert(imgSrc)
+            //     $('#barcodegenerated').html(`<img src='${imgSrc}' 2x>`);
+            // }
+            $(document).ready(function () {
+                $(".btn").click(function (event) {
+                    event.preventDefault();
+
+                    // function myFunction1() {
+
+                    $('#loader_display').removeClass('hidden');
+                    $('#barcodegenerated').addClass('hidden');
+
+
+                    var videoID = $('#videoID').val();
+                    // alert(videoID)
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/seun',
+                        data: { videoID: videoID },
+                        // dataType: 'html'
+                        success: function (response) {
+                            //$('body').append(response);
+                            var imgSrc = "static/" + response.slice(32,)+'k' + '/' + response.slice(32,) + ".png"
+                            $('#barcodegenerated').html(`<img src='${imgSrc}' 2x>`);
+
+                            $('#loader_display').addClass('hidden');
+                            $('#barcodegenerated').removeClass('hidden');
+
+                            $('#videoID').attr('value', '');
+                            // alert(response)
+                        },
+                        error: function (response) {
+                            alert('an error occured')
+                        }
+                    })
+
+                    // }
+                });
+            });
+                // event.preventDefault()
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+/output/
+.DS_Store
+.idea
+config.yaml
+/.ipynb_checkpoints/
+/__pycache__/
