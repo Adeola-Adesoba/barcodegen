@@ -251,6 +251,8 @@ def parse_playlist(playlist):
 
 
 # Main function, like we have in many C based languages
+# Heroku asked for commnad line arguments which could not be parsed
+# so all arguments were removed and made Global variables in gen_mbc as shown below
 def gen_mbc(video_id):
     global arg_json
     global arg_barcode
@@ -294,11 +296,12 @@ def gen_mbc(video_id):
         # Verify experiment environment
 
         # output_directory = home + "\\static" + "\\" + yturl.split("=")[-1]
+        # added an extra k to the folders to the due to the debugging
         output_directory = r'static/'+ yturl.split("=")[-1]+'k'
 
         print('here2', output_directory)
         if not os.path.exists(output_directory):
-            os.mkdir(output_directory,0o775)
+            os.mkdir(output_directory,0o775) # this is to solve the permission errors
             
         if arg_json is None:
             json_file = output_directory + "/" + yturl.split("=")[-1] + ".json"
@@ -320,12 +323,12 @@ def gen_mbc(video_id):
         # Write barcode data to json file
         # Check if the file is already available, delete it.
         static_path = os.getcwd() +'/'+ output_directory
-        print("staic path >>>>>>>>..",static_path)
+        print("static path >>>>>>>>..",static_path)
         # filenamejson =  yturl.split("=")[-1] + ".json"
         print('argjson>>>>>>>>',arg_json)
 
         if not os.path.exists(static_path):
-            os.mkdir(static_path +'\\',0o775)
+            os.mkdir(static_path +'\\',0o775) # to solve the permisson error
             with open(os.getcwd() +'/'+arg_json, "w") as file:
                 file.write(json.dumps(generate_barcode(video=video)))
                 
