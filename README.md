@@ -19,7 +19,9 @@ Navigate to the downloaded repository (cd barcodegen)
 Create a Virtual environment to install all required packages by installing the requirements.txt:
 
 $conda create --name barcodegen
+
 $conda activate barcodegen
+
 $(barcodegen) conda install -r requirements.txt
 
 run app.py ( This should run after properly installing flask and its dependencies)
