@@ -3,7 +3,7 @@
 This Web app takes reference from the repository by Author: Erol Recep(https://github.com/erolrecep)
 Title : moviebarcode[https://github.com/erolrecep/moviebarcode].
 
-This web app was developed to visualize aBarcode generator and is deployed on Heroku and hosted at https://mbcodegen.herokuapp.com/. 
+This web app was developed to visualize a Barcode generator and is deployed on Heroku and hosted at https://mbcodegen.herokuapp.com/. 
 
 You can test it by providing either a YouTube video URL, Video ID or both as an input to generate a barcode.
 
